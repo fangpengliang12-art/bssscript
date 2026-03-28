@@ -25486,7 +25486,7 @@ function BeeSwarmSimulator(DATA){
         out.flowerIn={}
         out._flowerIn={}
         out.pollen=0
-        out.honey=2000000000
+        out.honey=1000000000000000
         
         out.cameraRaycastPoint=new CANNON.Vec3()
         out.cameraRaycastResult=new CANNON.RaycastResult()
@@ -33726,7 +33726,7 @@ function BeeSwarmSimulator(DATA){
         }
         
         player.extraInfo=save.extraInfo
-        player.honey=Math.max(save.honey, 2000000000)
+        player.honey=Math.max(save.honey, 1000000000000000)
         player.pollen=save.pollen
         player.currentGear=save.currentGear
         for(let i in player.currentGear)if(i.indexOf('Snail')>-1){player.currentGear[i.replaceAll('Snail','Shell')]=player.currentGear[i].slice();delete player.currentGear[i]}
@@ -33867,8 +33867,45 @@ function BeeSwarmSimulator(DATA){
             updateBeesmasTree()
         }
 
-        items.mythicEgg.amount=15
+        items.mythicEgg.amount=1000
         items.starJelly.amount=1500
+        items.starTreat.amount=500
+        items.treat.amount=1000
+        items.atomicTreat.amount=1000
+        items.blueberry.amount=1000
+        items.strawberry.amount=1000
+        items.pineapple.amount=1000
+        items.sunflowerSeed.amount=1000
+        items.moonCharm.amount=1000
+        items.bitterberry.amount=1000
+        items.neonberry.amount=1000
+        items.spiritPetal.amount=1000
+        items.royalJelly.amount=1000
+        items.ticket.amount=1000
+        items.gumdrops.amount=1000
+        items.coconut.amount=1000
+        items.stinger.amount=1000
+        items.glue.amount=1000
+        items.oil.amount=1000
+        items.enzymes.amount=1000
+        items.redExtract.amount=1000
+        items.blueExtract.amount=1000
+        items.tropicalDrink.amount=1000
+        items.purplePotion.amount=1000
+        items.superSmoothie.amount=1000
+        items.glitter.amount=1000
+        items.fieldDice.amount=1000
+        items.smoothDice.amount=1000
+        items.loadedDice.amount=1000
+        items.microConverter.amount=1000
+        items.honeysuckle.amount=1000
+        items.whirligig.amount=1000
+        items.magicBean.amount=1000
+        items.cloudVial.amount=1000
+        items.softWax.amount=1000
+        items.hardWax.amount=1000
+        items.causticWax.amount=1000
+        items.swirledWax.amount=1000
         player.updateInventory()
 
         let tut=['Welcome to Bee Swarm Simulator!',5000,'Click the egg icon on the bar on','the left to open your inventory!',4000,'Click on the Basic Egg to select it!',4000,'Hover your mouse over a hive slot','and click to hatch it!',4000,'Collect pollen in fields with your bee!',4000,'After filling up your bag, stand near','your hive to convert the pollen into honey!',4000,'Use honey to buy more bee eggs and new tools!',5000,'Talk to bears and complete their quests!',3000,'Have fun!'],t=1000
