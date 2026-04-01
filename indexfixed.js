@@ -25486,7 +25486,7 @@ function BeeSwarmSimulator(DATA){
         out.flowerIn={}
         out._flowerIn={}
         out.pollen=0
-        out.honey=1000000000000000
+        out.honey=999000000000000000
         
         out.cameraRaycastPoint=new CANNON.Vec3()
         out.cameraRaycastResult=new CANNON.RaycastResult()
@@ -33726,7 +33726,7 @@ function BeeSwarmSimulator(DATA){
         }
         
         player.extraInfo=save.extraInfo
-        player.honey=Math.max(save.honey, 1000000000000000)
+        player.honey=Math.max(save.honey, 999000000000000000)
         player.pollen=save.pollen
         player.currentGear=save.currentGear
         for(let i in player.currentGear)if(i.indexOf('Snail')>-1){player.currentGear[i.replaceAll('Snail','Shell')]=player.currentGear[i].slice();delete player.currentGear[i]}
@@ -33868,7 +33868,9 @@ function BeeSwarmSimulator(DATA){
         }
 
         // 1 million of every obtainable item
-        const M=1000000
+        const M=1000000000000000
+        // 100 hive slots (20 rows of 5)
+        for(let _h=0;_h<100;_h++){if(player.hive[player.hive.length-1].length>=5){player.hive.push([])}}
         items.ticket.amount=M
         items.gumdrops.amount=M
         items.coconut.amount=M
